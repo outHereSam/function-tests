@@ -30,3 +30,15 @@ test("checks if string is a palindrome", () => {
   expect(isPalindrome("never odd or even")).toBe(true);
   expect(isPalindrome("We panic in a pew")).toBe(true);
 });
+
+// Word count test
+test("counts number of words in string", () => {
+  expect(wordCount("This is great")).toBe(3);
+  expect(wordCount("keyboard")).toBe(1);
+  expect(wordCount("straight to the gulag")).toBe(4);
+});
+
+// double function test
+test("doubles every number in array", () => {
+  expect(double([1, 2, 3])).toStrictEqual([1, 4, 9]);
+});
