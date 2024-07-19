@@ -42,3 +42,9 @@ test("counts number of words in string", () => {
 test("doubles every number in array", () => {
   expect(double([1, 2, 3])).toStrictEqual([1, 4, 9]);
 });
+
+// Tests filterEven function
+test("filters out even numbers from array", () => {
+  expect(filterEven([1, 2, 3, 4])).toStrictEqual([2, 4]);
+  expect(filterEven([5, 6, 12, 32, 9])).toStrictEqual([6, 12, 32]);
+});
