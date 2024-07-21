@@ -48,3 +48,15 @@ test("filters out even numbers from array", () => {
   expect(filterEven([1, 2, 3, 4])).toStrictEqual([2, 4]);
   expect(filterEven([5, 6, 12, 32, 9])).toStrictEqual([6, 12, 32]);
 });
+
+// Tests sum function
+test("calculates the sum of all numbers in array", () => {
+  expect(sum([1, 2, 3, 4])).toBe(10);
+  expect(sum([2, 4, 6])).toBe(12);
+});
+
+// Tests average function
+test("calculates the average of numbers in array", () => {
+  expect(average([1, 2, 3])).toBe(2);
+  expect(average([2, 4, 5, 1])).toBe(3);
+});
