@@ -67,3 +67,9 @@ test("returns full name of a person object", () => {
     "Sam Danquah"
   );
 });
+
+// Tests isAdult function
+test("checks if a person is 18 years or older", () => {
+  expect(isAdult({ age: 18 })).toBe(true);
+  expect(isAdult({ age: 15 })).toBe(false);
+});
