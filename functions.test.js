@@ -40,7 +40,7 @@ test("counts number of words in string", () => {
 
 // double function test
 test("doubles every number in array", () => {
-  expect(double([1, 2, 3])).toStrictEqual([1, 4, 9]);
+  expect(double([1, 2, 3])).toStrictEqual([2, 4, 6]);
 });
 
 // Tests filterEven function

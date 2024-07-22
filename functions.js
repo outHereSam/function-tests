@@ -72,7 +72,7 @@ function wordCount(str) {
 function double(arr) {
   let doubledArr = [];
 
-  arr.map((number) => doubledArr.push(number * number));
+  arr.map((number) => doubledArr.push(number * 2));
 
   return doubledArr;
 }
