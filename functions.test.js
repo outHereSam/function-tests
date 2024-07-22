@@ -60,3 +60,10 @@ test("calculates the average of numbers in array", () => {
   expect(average([1, 2, 3])).toBe(2);
   expect(average([2, 4, 5, 1])).toBe(3);
 });
+
+// Tests fullname function
+test("returns full name of a person object", () => {
+  expect(fullName({ firstName: "Sam", lastName: "Danquah" })).toBe(
+    "Sam Danquah"
+  );
+});
