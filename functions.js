@@ -191,4 +191,5 @@ module.exports = {
   fullName,
   isAdult,
   filterByAge,
+  compose,
 };

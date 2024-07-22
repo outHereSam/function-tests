@@ -10,6 +10,7 @@ const {
   fullName,
   isAdult,
   filterByAge,
+  compose,
 } = require("./functions");
 
 // Test for capitalize function
@@ -72,4 +73,36 @@ test("returns full name of a person object", () => {
 test("checks if a person is 18 years or older", () => {
   expect(isAdult({ age: 18 })).toBe(true);
   expect(isAdult({ age: 15 })).toBe(false);
+});
+
+// Test filterByAge function
+let people = [
+  {
+    name: "Sam",
+    age: 25,
+  },
+  {
+    name: "Kash",
+    age: 14,
+  },
+  {
+    name: "Ella",
+    age: 17,
+  },
+  {
+    name: "Rodney",
+    age: 30,
+  },
+];
+
+test("filters an array of person objects to keep only those at least minAge old", () => {
+  expect(filterByAge(people, 18)).toStrictEqual([
+    { name: "Sam", age: 25 },
+    { name: "Rodney", age: 30 },
+  ]);
+});
+
+// Tests compose function
+test("combines functions", () => {
+  expect(compose(capitalize, reverse)("hello")).toBe("Olleh");
 });
